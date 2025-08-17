@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Meeting Notes Summarizer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>AI Meeting Notes Summarizer</h1>
+    
+    <div class="input-section">
+      <div class="upload-area" id="uploadArea">
+        <input type="file" id="fileInput" accept=".txt">
+        <p>Drag & drop meeting transcript or <span>browse files</span></p>
+        <p class="file-info" id="fileInfo"></p>
+      </div>
+      
+      <div class="instructions">
+        <label for="instructions">Custom Instructions:</label>
+        <textarea id="instructions" placeholder="E.g., 'Summarize in bullet points for executives' or 'Highlight action items'"></textarea>
+      </div>
+      
+      <button id="generateBtn">Generate Summary</button>
+    </div>
+    
+    <div class="summary-section">
+      <h2>Generated Summary</h2>
+      <div class="summary-container">
+        <div contenteditable="true" id="summaryOutput" class="editable-summary"></div>
+      </div>
+    </div>
+    
+    <div class="share-section" id="shareSection">
+      <h2>Share Summary</h2>
+      <div class="email-input">
+        <label for="emails">Recipient Emails (comma separated):</label>
+        <input type="text" id="emails" placeholder="email1@example.com, email2@example.com">
+      </div>
+      <div class="message-input">
+        <label for="message">Additional Message (optional):</label>
+        <textarea id="message" placeholder="Add a personal message..."></textarea>
+      </div>
+      <button id="shareBtn">Send Summary</button>
+      <p class="status" id="status"></p>
+    </div>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
